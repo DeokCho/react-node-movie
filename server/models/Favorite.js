@@ -1,25 +1,25 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const favoriteSchema = mongoose.Schema({
-    userFrom:{
-        type:Schema.Types.ObjectId,
-        ref:'User'
+    userFrom: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     },
-    movieId:{
+    movieId: {
         type: String
     },
-    movieTitle:{
+    movieTitle: {
         type: String
     },
-    moviePost:{
+    moviePost: {
         type: String
     },
-    movieRunTime:{
+    movieRunTime: {
         type: String
     }
-}, {timestamps: true})
+}, { timestamps: true })
 
-const Favorite = mongoose.model('Favorite', favoriteSchema)
+const Favorite = mongoose.model('Favorite', favoriteSchema);
 
-modules.exports = {Favorite}
+module.exports = { Favorite }

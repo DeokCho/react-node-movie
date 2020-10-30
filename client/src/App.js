@@ -12,9 +12,9 @@ function App() {
     <div>
       <hr/>
       <Switch>
-        <Route exact path="/" component={Auth(LandingPage,null)}/>
-        <Route exact path="/login" component={Auth(LoginPage,false)}/>
-        <Route exact path="/register" component={Auth(RegisterPage,false)}/>
+        <Route exact path="/" component={Auth(LandingPage, null)}/>
+        <Route exact path="/login" component={Auth(LoginPage, false)}/>
+        <Route exact path="/register" component={Auth(RegisterPage, false)}/>
         <Route exact path="/movie/:movieId" component={MovieDetail}/>
       </Switch>
     </div>

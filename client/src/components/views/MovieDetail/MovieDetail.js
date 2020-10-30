@@ -6,6 +6,7 @@ import MovieInfo from './Sections/MovieInfo'
 import GridCards from '../commons/GridCards'
 import {Grid} from '@material-ui/core'
 import Favorite from './Sections/Favorite'
+import man from '../../../image/man.png'
 
 const MovieDetail = (props) => {
     let movieId = props.match.params.movieId
@@ -50,7 +51,7 @@ const MovieDetail = (props) => {
             <div style={{width:'85%', margin: '1rem auto'}}>
 
                 <div style={{display:'flex', justifyContent:'flex-end'}}>
-                    <Favorite movieInfo={movieInfo} movieId={movieId}/>
+                    <Favorite movieInfo={movieInfo} movieId={movieId} userFrom={localStorage.getItem('userId')}/>
                 </div>
 
                 {/* movieInfo */}
@@ -63,7 +64,7 @@ const MovieDetail = (props) => {
                         <React.Fragment key={index}>
                             <GridCards 
                                 image={cast.profile_path ? 
-                                    `${IMAGE_BASE_URL}w500${cast.profile_path}`: null}
+                                    `${IMAGE_BASE_URL}w500${cast.profile_path}`: man}
                                 actorName={cast.name}
                             />
                         </React.Fragment>

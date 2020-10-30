@@ -12,7 +12,7 @@ const MovieInfo = props => {
                 <Descriptions.Item label="상영관수">{movie.revenue}</Descriptions.Item>
                 <Descriptions.Item label="영화시간">{movie.runtime}분</Descriptions.Item>
                 <Descriptions.Item label="평점">
-                    {movie.vote_average}/5.0
+                    {movie.vote_average} / 10.0
                 </Descriptions.Item>
                 <Descriptions.Item label="투표수">{movie.vote_count}</Descriptions.Item>
                 <Descriptions.Item label="상영상태">{movie.status}</Descriptions.Item>

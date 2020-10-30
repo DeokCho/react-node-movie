@@ -75,9 +75,8 @@ app.get('/api/logout', auth, (req, res) => {
     {token:""}
     ,(err, user)=>{
       if(err) return res.json({success:false, err})
-      return res.status(200).send({
-        success:true
-      })
+        res.status(200).send({success:true})
+        // res.cookie('x_auth', "")
   })
 })
 
@@ -90,3 +89,5 @@ app.get('/api/hello', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+app.use('/api/favorite', require('./routes/favorite'))
