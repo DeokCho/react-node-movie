@@ -3,6 +3,7 @@ import {API_URL, API_KEY, IMAGE_BASE_URL}from '../../../Config'
 import MainImage from './Sections/MainImage'
 import GridCards from '../commons/GridCards'
 import {Grid} from '@material-ui/core'
+import { withRouter } from 'react-router-dom'; 
 
 const LandingPage = () => {
     const [movies, setMovies] = useState([])
@@ -64,4 +65,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default withRouter(LandingPage);
