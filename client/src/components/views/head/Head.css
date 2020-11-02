@@ -1,0 +1,134 @@
+body{
+    margin:0;
+    font-family:Gmarket;
+}
+
+a{
+    text-decoration:none;
+    color:white;    
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+    color:white;
+}
+
+.navbar_logo{
+    font-size: 30px;
+    color:white;
+}
+
+.navbar_menu{
+    display:flex;
+    list-style:none;
+    padding-left:0;
+
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover{
+    background-color: #4b4d49;
+    border-radius:4px;
+}
+
+.navbar_links{
+    color:white;
+    list-style: none;
+    display:flex;
+    padding-left: 0;
+}
+
+.navbar_links li{
+    padding: 8px 12px;
+}
+
+.navbar_btn{
+    display:none;
+    position: absolute;
+    right:32px;
+}
+
+.navbar_menu_hidden{
+    display:flex;
+    list-style:none;
+    padding-left:0;
+}
+.navbar_menu_hidden li {
+    padding: 8px 12px;
+}
+
+.navbar_menu_hidden li:hover{
+    background-color: #4b4d49;
+    border-radius:4px;
+}
+
+.navbar_links_hidden{
+    color:white;
+    list-style: none;
+    display:flex;
+    padding-left: 0;
+}
+
+.navbar_links_hidden li{
+    padding: 8px 12px;
+}
+
+
+@media screen and (max-width:768px){
+    .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+        padding:8px 24px;
+        font-size: 24px;
+        color: white;
+    }
+    .navbar_menu{
+        display:none;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+    .navbar_menu li{
+        width:100%;
+        text-align: center;
+    }
+    .navbar_links{
+        display:none;
+        justify-content: center;
+        width:100%;
+    }
+    .navbar_btn{
+        display:block;
+    }
+    .navbar_menu_hidden{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+    .navbar_menu_hidden li{
+        width:100%;
+        text-align: center;
+    }
+    .navbar_links_hidden{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+    }
+    .navbar_links_hidden li{
+        width:100%;
+        text-align: center;
+    }
+
+    
+}
